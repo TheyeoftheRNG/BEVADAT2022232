@@ -11,7 +11,7 @@ from xmlrpc.client import boolean
 
 
 
-def decision(input_list):
+def contains_odd(input_list):
     hasodd = False
     for i in input_list:
         if i % 2 == 1:
@@ -26,7 +26,7 @@ def taskmain1():
     print("task1")
     odd_list = [6,4,2,8,10,4,1]
     print(odd_list)
-    if decision(odd_list):
+    if contains_odd(odd_list):
         print("has odd!")
     else:
         print("there are no odds!")
@@ -34,7 +34,7 @@ def taskmain1():
     print()
     no_odd_list = [6,4,2,8,10,4]
     print(no_odd_list)
-    if decision(no_odd_list):
+    if contains_odd(no_odd_list):
         print("has odd!")
     else:
         print("there are no odds!")
