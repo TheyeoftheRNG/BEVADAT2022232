@@ -162,11 +162,11 @@ def add_border(arr):
 # list_days()
 
 
-import pandas as pd
-
 def list_days(start_date, end_date):
-    dates = pd.date_range(start_date, end_date, freq='D')
-    return [str(date.date()) for date in dates]
+    start = np.datetime64(start_date + "-01")
+    end = np.datetime64(end_date + "-01")
+    resault = np.array(np.arange(start,end),np.datetime64)
+    return resault
 
 # print(list_days('2023-03', '2023-04'))
 
@@ -177,10 +177,10 @@ def list_days(start_date, end_date):
 # # Ki: 2017-03-24
 # # get_act_date()
 
-from datetime import date
+
 
 def get_act_date():
-    return date.today().strftime("%Y-%m-%d")
+    return np.datetime64("now", "D")
 
 # print(get_act_date())
 
@@ -189,9 +189,11 @@ def get_act_date():
 # Ki: másodpercben az idó, int-é kasztolva
 # sec_from_1970()
 
-import time
+
 
 def sec_from_1970():
-    return int(time.time())
+    now = np.datetime64("now","s")
+    then =np.datetime64("1970-01-01T00:02:00",)
+    return  int(str(now-then)[:-7])
 
-# print(sec_from_1970())
+print(sec_from_1970())
