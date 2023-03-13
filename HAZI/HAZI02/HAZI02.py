@@ -196,4 +196,4 @@ def sec_from_1970():
     then =np.datetime64("1970-01-01T00:02:00",)
     return  int(str(now-then)[:-7])
 
-print(sec_from_1970())
+# print(sec_from_1970())
