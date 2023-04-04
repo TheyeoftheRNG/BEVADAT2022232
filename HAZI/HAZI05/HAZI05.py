@@ -7,7 +7,7 @@ from sklearn.metrics import confusion_matrix
 import random
 
 
-class knnClassifier:
+class KNNClassifier:
 
     def __init__(self, k: int, test_split_ratio: float) -> None:
         self.k = k
