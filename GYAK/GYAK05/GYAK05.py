@@ -5,7 +5,7 @@ from scipy.stats import mode
 from sklearn.metrics import confusion_matrix
 
 
-class knnClassifier:
+class KNNClassifier:
 
     def __init__(self,k:int,test_split_ratio :float) -> None:
         self.k = k
