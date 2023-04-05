@@ -1,11 +1,3 @@
-import numpy as np
-import seaborn as sns
-from typing import Tuple
-from scipy.stats import mode
-from sklearn.metrics import confusion_matrix
-
-
-class KNNClassifier:
 
 import numpy as np
 import seaborn as sns
