@@ -28,7 +28,7 @@ class Dense:
         self.bias = np.random.random(size=(self.n_output))
 
     def forward_pass_a(self, X):
-        return x @ self.W + self.bias
+        return X @ self.W + self.bias
 
 class ReLU():
     def forward_pass(self, x):
